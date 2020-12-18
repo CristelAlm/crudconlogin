@@ -1,4 +1,10 @@
-<!doctype html>
+<?php 
+    $idCategoria = $datos[0]['id_categoria'];
+    $categoria = $datos[0]['categoria']; 
+    $descripcion = $datos[0]['descripcion'];
+   
+ ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Required meta tags -->
@@ -39,35 +45,33 @@
 
     </div>
   </nav>
-  <div class="jumbotron">
-<div class="container">
-        <div class="row">
-        <div class="col-sm-12">
-          <center>
-          <img src="<?php echo base_url('cris.jpg') ?>" alt="" width="350" height="350">
-        </center>
-        <form method="POST" action="<?php echo base_url().'/crear' ?>">
-           <center>
-          <h1>Datos del Admin</h1>
-        </center>
-        <label for="nom">Nombre</label>
-        <label for="concepto" class="form-control">Cristel Alonso Morales</label>
-        <label for="edad">Edad</label>
-        <label for="concepto" class="form-control">25 Años</label>
-        <label for="carr">Carrera</label>
-        <label for="concepto" class="form-control">Ing. en Sistemas Computacionales</label>
-        <label for="espe">Especialidad</label>
-        <label for="concepto" class="form-control">Administración de Servicios Web</label>
-        </form>
+		<hr>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card-header">
+				</div>
+				<div class="card-body">
+					<h2>Actualizar categorias</h2>
+					<hr>
+					<form method="POST" action="<?php echo base_url().'/ActualizarCat' ?>">
+						<input type="text" id="idCategoria" name="idCategoria" hidden="idCategoria" value="<?php echo $idCategoria ?>">
+						<label for="categoria">Categoria</label>
+						<input type="text" name="categoria" id="categoria" class="form-control" value="<?php echo $categoria ?>">
+						<label for="descripcion">Descripción</label>
+						<input type="text" name="descripcion" id="descripcion" class="form-control" value="<?php echo $descripcion ?>">
+						
+					
+						<button class="btn btn-warning">Guardar</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
-        </div>
-        </div>
-        <hr>
-    
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </body>
 </html>

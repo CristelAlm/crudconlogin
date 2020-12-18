@@ -35,7 +35,15 @@ $routes->get('/inicio', 'Home::inicio');
 $routes->post('/login', 'Home::login');
 $routes->get('/salir', 'Home::salir');
 $routes->post('/crear', 'Home::crear');
-
+$routes->get('/contactos', 'Home::contactos');
+$routes->get('/categoria', 'Home::categoria');
+$routes->get('/obtenerCategoria/(:any)', 'Home::obtenerCategoria/$1');
+$routes->post('/ActualizarCat', 'Home::actualizar');
+$routes->get('/eliminar/(:any)', 'Home::eliminar/$1');
+$routes->post('/Crearcontacto', 'Home::crearcont');
+$routes->get('/obtenerCont/(:any)', 'Home::obtenerContacto/$1');
+$routes->post('/ActualizarCont', 'Home::actualizarcont');
+$routes->get('/eliminarcont/(:any)', 'Home::eliminarContacto/$1');
 
 /**
  * --------------------------------------------------------------------
